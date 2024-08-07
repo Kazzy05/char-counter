@@ -1,25 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container, Box, Heading } from '@chakra-ui/react';
+import CharCounter from './CharCounter';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxW='1000px'>
+      <Box padding="4">
+        <Heading as="h1" size="xl" marginBottom="4">
+          文字数カウンター
+        </Heading>
+        <CharCounter />
+      </Box>
+    </Container>
   );
 }
 
